@@ -18,7 +18,7 @@ def extract(url, table_attribs):
     ''' This function extracts the required
     information from the website and saves it to a dataframe. The
     function returns the dataframe for further processing. '''
-        page = requests.get(url).text
+    page = requests.get(url).text
     data = BeautifulSoup(page,'html.parser')
     df = pd.DataFrame(columns=table_attribs)
     tables = data.find_all('tbody')
